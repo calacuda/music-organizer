@@ -6,7 +6,7 @@ if its an audio file.
 
 ## developement status:
 
-this program is not yet runable. it has only been mapped out
+this program is not yet runable. it has only been mapped out.
 
 
 ## Requirements:
