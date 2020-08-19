@@ -1,2 +1,11 @@
 # song-metadata-downloader
-a wraper for youtube-dl, it will download the video and add metadata to the file.
+
+This scripts is a wrapper for youtube_dl, which downloads youtube videos.The
+scripts adds the functionality of editing the metadata of the downloaded file
+if its an audio file.
+
+
+## Requirements:
+
+In addition to the python modules in "requirements.txt", you'll also need
+youtube_dl (https://github.com/ytdl-org/youtube-dl).
