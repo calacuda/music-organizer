@@ -8,14 +8,17 @@ Music --- <artist> --- <album> --- <song>
        |            |           |
        |            |           |- <song>
        |            |
+       |	    |
        |            |- <album> --- <song>
        |	       	        |
        |	    		|- <song>
+       |
        |
        |- <artist> --- <album> --- <song>
                     |           |
                     |           |- <song>
                     |
+		    |
                     |- <album> --- <song>
         	       	        |
         	    		|- <song>
