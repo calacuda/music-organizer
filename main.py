@@ -1,8 +1,8 @@
 """
 song metadata downloader.py
 
-This scripts is a wrapper for youtube_dl, which downloads youtube videos.The
-scripts adds the functionality of editing the metadata of the downloaded file.
+this script will loop over all the music files in a directory and find meta
+data for them.
 
 By: Calacuda | MIT Licence
 """
@@ -35,36 +35,18 @@ def get_album(url):
     return album, artist
 
 
-def metadata():
+def give_metadata(song):
     """
     handles getting album and artist, metadata, and editing the file
     """
-    if argv[-1][0:8] not in {"https:/", "http://"}:
-        url = [arg for arg in argv if arg[0:8] in {"https:/", "http://"}][0]
-    else:
-        url = argv[-1]
-    album, artist = get_album(url)
+    album, artist = song  # the stuff to get album and artist info from the song file
     metadata = get_meta(album, artist)
     edit_file(metadata)
 
 
-def argument_remaker(args):
-    """
-    turns the sys.argv junk back into what was typed at the terminal.
-    """
-    if "--extract-audio" in args:
-        music = True
-    else:
-        music = False
-    return " ".join(args[1:]), music
-
-
 def main():
-    cmd_args, music = argument_remaker(argv)
-    system(f"youtube_dl {cmd_args}")
-    if music:
-        metadata()
-
+    give_metadata()
+    
 
 if __name__ == "__main__":
     main()
